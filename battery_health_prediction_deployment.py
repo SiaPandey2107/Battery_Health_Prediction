@@ -11,8 +11,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load("Battery_Health_prediction_model.pkl")
-encoder = joblib.load("label_encoder.pkl")
+model = joblib.load("Battery_model(1).pkl")
+encoder = joblib.load("label_encoder(2).pkl")
 st.title("Battery Health Prediction")
 
 Battery_Type= st.selectbox("Battery_Type",encoder["Battery_Type"].classes_)
