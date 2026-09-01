@@ -17,7 +17,7 @@ encoder = joblib.load("label_encoder (2).pkl")
 st.title("Battery Health Prediction")
 
 Battery_Type= st.selectbox("Battery_Type",encoder["Battery_Type"].classes_)
-Poor_Cell_Design=  st.number_input("Poor_Cell_Design", min_value=0.0, max_value=1.0, step=1)
+Poor_Cell_Design=  st.number_input("Poor_Cell_Design", min_value=0.0, max_value=1.0, step=1.0)
 External_Abuse= st.selectbox("External_Abuse",encoder["External_Abuse"].classes_)
 Poor_Battery_Design	=  st.number_input("Poor_Battery_Design",min_value=0.0, max_value=1.0, step=1)
 Short_Circuits	=  st.number_input("Short_Circuits",min_value=0.0, max_value=1.0, step=1)
