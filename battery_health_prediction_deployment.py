@@ -25,7 +25,7 @@ Temperature	=  st.number_input("Temperature")
 Overcharge_Overdischarge	= st.selectbox("Overcharge_Overdischarge",encoder["Overcharge_Overdischarge"].classes_)
 Battery_Maintenance	= st.selectbox("Battery_Maintenance",encoder["Battery_Maintenance"].classes_)
 
-df = pd.dataframe({
+df = pd.Dataframe({
     "Battery_Type":[Battery_Type],
     "Poor_Cell_Design":[Poor_Cell_Design],
     "External_Abuse":[External_Abuse],
