@@ -36,8 +36,13 @@ df = pd.DataFrame({
     "Battery_Maintenance":[Battery_Maintenance],
 })
 
+
+for col, enc in encoder.items():
+    if col in df.columns:
+        df[col] = enc.transform(df[col])
+        
 if st.button("Predict Battery Health"):
-    prediction = model (1).predict(df)[0]
+    prediction = model.predict(df)[0]
 
     if prediction == 0:
         st.write("Moderate")
