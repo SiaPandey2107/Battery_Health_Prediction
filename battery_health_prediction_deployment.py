@@ -37,7 +37,7 @@ df = pd.DataFrame({
 })
 
 if st.button("Predict Battery Health"):
-    prediction = model.predict(df)[0]
+    prediction = model (1).predict(df)[0]
 
     if prediction == 0:
         st.write("Moderate")
